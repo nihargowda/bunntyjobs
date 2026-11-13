@@ -1,0 +1,75 @@
+{
+  "_readme": "Copy this file to settings.json in the same folder and edit it. settings.json is gitignored. Patterns are case-insensitive regular expressions.",
+
+  "_timezone": "Your local time zone. It decides what counts as 'today' for the daily count and logs.",
+  "timezone": "America/Chicago",
+
+  "_daily_target": "Confirmed applications per day you are aiming for (all agents combined).",
+  "daily_target": 50,
+
+  "_min_score": "Lowest AI fit score (1-10) a job needs before it is queued.",
+  "min_score": 7,
+
+  "_senior_min_score": "Titles matching senior_title_pattern need at least this score.",
+  "senior_min_score": 9,
+  "senior_title_pattern": "\\b(senior|sr)\\b",
+
+  "_special_min_score": "Optional: one title pattern allowed at a different score. Leave title_pattern empty to turn off.",
+  "special_min_score": {"title_pattern": "forward[- ]deployed product", "min_score": 6},
+
+  "_title_exclude": "Never apply to titles matching any of these.",
+  "title_exclude": ["\\blead\\b", "\\bdirector\\b", "construction"],
+
+  "_title_exclude_levels": "Seniority words to skip, e.g. roles below your level.",
+  "title_exclude_levels": ["\\bintern\\b", "\\bjunior\\b", "entry[- ]level"],
+
+  "_preferred_title_pattern": "Titles you want first when everything else is equal.",
+  "preferred_title_pattern": "product (manag|owner|lead)|product management",
+
+  "_salary_minimum": "Skip jobs whose posted maximum pay is below this (yearly). 0 turns it off.",
+  "salary_minimum": 80000,
+
+  "_excluded_companies": "Companies you never want to apply to.",
+  "excluded_companies": [],
+
+  "_excluded_industries": "Patterns in the title or description that rule a job out.",
+  "excluded_industries": ["\\b(church|ministry|faith-based)\\b"],
+
+  "_staffing_firms": "Staffing agencies. They are exempt from the per-company cap because each role is a different client.",
+  "staffing_firms": ["Robert Half", "Randstad", "TEKsystems", "Insight Global", "Kforce", "Apex Systems"],
+
+  "_company_cap": "At most this many submitted applications per company within company_cap_days.",
+  "company_cap": 2,
+  "company_cap_days": 60,
+
+  "_us_only": "true keeps only US and remote-US roles.",
+  "us_only": true,
+
+  "_need_sponsorship": "true skips postings that say they cannot sponsor a work visa.",
+  "need_sponsorship": false,
+
+  "_region_priority": "Location patterns in order of preference; earlier ones rank higher. Others come last.",
+  "region_priority": ["\\b(TX|Texas)\\b|\\b(Austin|Dallas|Houston)\\b", "remote"],
+
+  "_resumes": "Paths are relative to the 'ApplyPilot setup' folder. The first variant whose title_pattern matches is sent; otherwise the default.",
+  "resumes": {
+    "default": "resumes/resume.pdf",
+    "variants": [
+      {"file": "resumes/resume_product_owner.pdf", "title_pattern": "product owner"},
+      {"file": "resumes/resume_product_manager.pdf", "title_pattern": "product manag|product lead"},
+      {"file": "resumes/resume_business_analyst.pdf", "title_pattern": "analyst|implementation|systems"}
+    ]
+  },
+
+  "_scan_title_keep": "Scan stage: only score titles matching this pattern. Empty scores every title.",
+  "scan_title_keep": "product|analyst",
+
+  "_scan_title_drop": "Scan stage: never score titles matching any of these.",
+  "scan_title_drop": ["\\b(director|vp|vice president|head of|chief|principal)\\b", "\\b(intern|internship|co-op)\\b", "\\b(clearance|ts/sci)\\b"],
+
+  "_gmail_address": "Your own address, so the email tracker can ignore messages you sent.",
+  "gmail_address": "you@example.com",
+
+  "_launchd_label": "Name of the macOS background job that runs the scan pipeline.",
+  "launchd_label": "com.applypilot.pipeline"
+}

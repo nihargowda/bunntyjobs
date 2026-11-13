@@ -1,0 +1,36 @@
+# Your details: only the *.example.* templates in config/ are committed
+ApplyPilot setup/config/*
+!ApplyPilot setup/config/*.example.*
+
+# Your resumes, applications and history
+ApplyPilot setup/resumes/
+ApplyPilot setup/Applications/
+
+# Job state the scripts write while running
+ApplyPilot setup/auto/queue.json
+ApplyPilot setup/auto/tried*.txt
+ApplyPilot setup/auto/dead.txt
+ApplyPilot setup/auto/screened.txt
+ApplyPilot setup/auto/prefiltered.txt
+ApplyPilot setup/auto/account_sites.json
+ApplyPilot setup/auto/ats_boards.json
+ApplyPilot setup/auto/h1b_tiers.json
+ApplyPilot setup/auto/claims/
+ApplyPilot setup/auto/run_logs/
+**/application_control.sqlite3*
+
+# Secrets
+env.txt
+.env*
+
+# Office lock files and temp files
+.~lock.*#
+~$*
+*.tmp
+
+# Backups, OS and local tool state
+*.bak-*
+.DS_Store
+.claude/*
+!.claude/commands/
+__pycache__/

@@ -1,0 +1,61 @@
+{
+  "_readme": "Copy to profile.json and fill in. This is ApplyPilot's profile format; setup.sh copies it to ~/.applypilot/profile.json. profile.json is gitignored.",
+  "personal": {
+    "full_name": "Jordan Example",
+    "preferred_name": "Jordan",
+    "email": "you@example.com",
+    "password": "",
+    "phone": "(555) 555-0100",
+    "address": "123 Main St",
+    "city": "Austin",
+    "province_state": "Texas",
+    "country": "United States",
+    "postal_code": "78701",
+    "linkedin_url": "https://www.linkedin.com/in/your-handle",
+    "github_url": "",
+    "portfolio_url": "",
+    "website_url": ""
+  },
+  "work_authorization": {
+    "legally_authorized_to_work": "Yes",
+    "require_sponsorship": "No",
+    "work_permit_type": ""
+  },
+  "availability": {
+    "earliest_start_date": "2 weeks notice",
+    "available_for_full_time": "Yes",
+    "available_for_contract": "No"
+  },
+  "compensation": {
+    "salary_expectation": 100000,
+    "salary_currency": "USD",
+    "salary_range_min": 90000,
+    "salary_range_max": 120000,
+    "currency_conversion_note": ""
+  },
+  "experience": {
+    "years_of_experience_total": 5,
+    "education_level": "Bachelor's Degree",
+    "current_title": "Product Manager",
+    "current_job_title": "Product Manager",
+    "current_company": "Example Corp",
+    "target_role": "Product Manager"
+  },
+  "skills_boundary": {
+    "programming_languages": ["SQL"],
+    "frameworks": ["Agile", "Scrum"],
+    "tools": ["JIRA", "Confluence"]
+  },
+  "resume_facts": {
+    "preserved_companies": ["Example Corp"],
+    "preserved_projects": [],
+    "preserved_school": "Example University",
+    "real_metrics": ["Replace with real results from your resume, e.g. 'Grew activation 12%'"]
+  },
+  "eeo_voluntary": {
+    "gender": "Decline to self-identify",
+    "race_ethnicity": "Decline to self-identify",
+    "veteran_status": "Decline to self-identify",
+    "disability_status": "Decline to self-identify"
+  }
+}
